@@ -1,6 +1,7 @@
 # (1) 相互情報量のフィッシャー情報量積分表現を利用した相互情報量推定法の提案
 ## arXiv:2510.05496 https://www.arxiv.org/abs/2510.05496
 Tadashi Wadayama
+
 Mutual Information Estimation via Score-to-Fisher Bridge for Nonlinear Gaussian Noise Channels
 
 We present a numerical method to evaluate mutual information (MI) in nonlinear Gaussian noise channels by using denoising score matching (DSM) learning for estimating the score function of channel output. Via de Bruijn's identity, Fisher information estimated from the learned score function yields accurate estimates of MI through a Fisher integral representation for a variety of priors and channel nonlinearities. In this work, we propose a comprehensive theoretical foundation for the Score-to-Fisher bridge methodology, along with practical guidelines for its implementation. We also conduct extensive validation experiments, comparing our approach with closed-form solutions and a kernel density estimation baseline. The results of our numerical experiments demonstrate that the proposed method is both practical and efficient for MI estimation in nonlinear Gaussian noise channels. Additionally, we discuss the theoretical connections between our score-based framework and thermodynamic concepts, such as partition function estimation and optimal transport.
@@ -12,6 +13,7 @@ We present a numerical method to evaluate mutual information (MI) in nonlinear G
 # (2) 情報勾配：相互情報量の勾配のスコア関数表現に基づく相互情報量最大化
 ## arXiv:2510.20179 https://arxiv.org/abs/2510.20179
 Tadashi Wadayama
+
 Information Gradient for Nonlinear Gaussian Channel with Applications to Task-Oriented Communication
 
 We propose a gradient-based framework for optimizing parametric nonlinear Gaussian channels via mutual information maximization. Leveraging the score-to-Fisher bridge (SFB) methodology, we derive a computationally tractable formula for the information gradient that is the gradient of mutual information with respect to the parameters of the nonlinear front-end. Our formula expresses this gradient in terms of two key components: the score function of the marginal output distribution, which can be learned via denoising score matching (DSM), and the Jacobian of the front-end function, which is handled efficiently using the vector-Jacobian product (VJP) within automatic differentiation frameworks. This enables practical parameter optimization through gradient ascent. Furthermore, we extend this framework to task-oriented scenarios, deriving gradients for both task-specific mutual information, where a task variable depends on the channel input, and the information bottleneck (IB) objective. A key advantage of our approach is that it facilitates end-to-end optimization of the nonlinear front-end without requiring explicit computation on the output distribution. Extensive experimental validation confirms the correctness of our information gradient formula against analytical solutions and demonstrates its effectiveness in optimizing both linear and nonlinear channels toward their objectives.
@@ -24,6 +26,7 @@ We propose a gradient-based framework for optimizing parametric nonlinear Gaussi
 ## arXiv:2601.01789 https://arxiv.org/abs/2601.01789
 
 Tadashi Wadayama
+
 Information Gradient for Directed Acyclic Graphs: A Score-based Framework for End-to-End Mutual Information Maximization
 
 This paper presents a general framework for end-to-end mutual information maximization in communication and sensing systems represented by stochastic directed acyclic graphs (DAGs). We derive a unified formula for the (mutual) information gradient with respect to arbitrary internal parameters, utilizing marginal and conditional score functions. We demonstrate that this gradient can be efficiently computed using vector-Jacobian products (VJP) within standard automatic differentiation frameworks, enabling the optimization of complex networks under global resource constraints. Numerical experiments on both linear multipath DAGs and nonlinear channels validate the proposed framework; the results confirm that the estimator, utilizing score functions learned via denoising score matching, accurately reproduces ground-truth gradients and successfully maximizes end-to-end mutual information. Beyond maximization, we extend our score-based framework to a novel unsupervised paradigm: digital twin calibration via Fisher divergence minimization.
@@ -36,6 +39,7 @@ This paper presents a general framework for end-to-end mutual information maximi
 ## arXiv:2601.07095 https://arxiv.org/abs/2601.07095
 
 Tadashi Wadayama and Takumi Takahashi
+
 Score-Based VAMP  with Fisher-Information-Based Onsager Correction
 
 We propose score-based VAMP (SC-VAMP), a vari-
